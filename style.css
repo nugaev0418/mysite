@@ -1,0 +1,188 @@
+:root {
+  --bg: #f8f9ff;
+  --bg-alt: #f0eefc;
+  --card: #ffffff;
+  --line: #e2def5;
+  --text: #1f2540;
+  --muted: #5d6585;
+  --accent: #5b30f0;
+  --accent-text: #5b30f0;
+  --accent2: #7c5cff;
+  --btn: #5b30f0;
+  --tg: #2b7de0;
+  --tag-bg: #efeaff;
+  --frame: #b7a7ff;
+  --shadow: 0 1px 2px rgba(31,37,64,.04), 0 12px 32px rgba(91,48,240,.08);
+  --glow: rgba(124,92,255,.14);
+  --radius: 20px;
+}
+:root[data-theme="dark"] {
+  --bg: #0d0b1f;
+  --bg-alt: #121030;
+  --card: #17153a;
+  --line: #2b2860;
+  --text: #ecebfa;
+  --muted: #a4a2c9;
+  --accent: #a58bff;
+  --accent-text: #b9a6ff;
+  --accent2: #b79dff;
+  --btn: #6c47ff;
+  --tg: #2b7de0;
+  --tag-bg: rgba(165,139,255,.14);
+  --frame: #2a2063;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.4);
+  --glow: rgba(124,92,255,.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background .3s, color .3s;
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+section { padding: 88px 0; }
+
+/* Hero ramkasi: binafsha fon ustida yumaloq oq oyna */
+.hero-frame { background: var(--frame); padding: 40px 40px; transition: background .3s; }
+.hero-card {
+  max-width: 1200px; margin: 0 auto;
+  background: var(--bg); border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(60,30,160,.18);
+  padding: 0 56px 72px;
+  transition: background .3s;
+}
+
+/* Navigatsiya */
+.nav { position: relative; display: flex; align-items: center; gap: 16px; height: 96px; }
+.logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; color: var(--text); text-decoration: none; letter-spacing: -.3px; }
+.logo i {
+  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px;
+  font-style: normal; font-size: 15px; font-weight: 800; color: #fff;
+  background: linear-gradient(135deg, var(--btn), #8f6cf5);
+}
+.nav ul { display: flex; gap: 8px; list-style: none; margin: 0 auto; }
+.nav ul a {
+  display: block; padding: 8px 14px; border-radius: 10px;
+  color: var(--text); text-decoration: none; font-weight: 500; font-size: 15px;
+  transition: color .2s, background .2s;
+}
+.nav ul a:hover { color: var(--accent-text); background: var(--bg-alt); }
+.nav-btn {
+  padding: 10px 24px; border-radius: 12px; border: 1.5px solid var(--btn);
+  color: var(--accent-text); font-weight: 600; font-size: 15px; text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.nav-btn:hover { background: var(--btn); color: #fff; }
+.icon-btn {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  color: var(--text); cursor: pointer; transition: border-color .2s, transform .15s;
+}
+.icon-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.icon-btn:focus-visible, .btn:focus-visible, .nav a:focus-visible { outline: 3px solid var(--accent2); outline-offset: 2px; }
+.icon-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.icon-moon { display: block; }
+.icon-sun { display: none; }
+:root[data-theme="dark"] .icon-moon { display: none; }
+:root[data-theme="dark"] .icon-sun { display: block; }
+.menu-btn { display: none; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; align-items: center; padding-top: 32px; }
+.hero h1 { font-size: clamp(38px, 5.4vw, 60px); line-height: 1.12; letter-spacing: -1.5px; font-weight: 800; }
+.hero h1 span { display: block; color: var(--accent-text); }
+.about { color: var(--muted); font-size: 18px; margin-top: 24px; max-width: 440px; }
+.hero-actions { margin-top: 36px; }
+.hero-note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+.hero-img img { width: 100%; height: auto; display: block; }
+
+/* Bo'lim sarlavhalari */
+.alt { background: var(--bg-alt); }
+.eyebrow {
+  display: block; margin-bottom: 10px;
+  font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text);
+}
+h2 { font-size: clamp(30px, 4.5vw, 42px); line-height: 1.15; letter-spacing: -1px; margin-bottom: 12px; }
+.lead { color: var(--muted); font-size: 18px; margin-bottom: 44px; max-width: 540px; }
+
+/* Kartochkalar */
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform .25s, border-color .25s;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.card .ico {
+  display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 20px;
+  border-radius: 14px; font-size: 24px;
+  background: linear-gradient(135deg, rgba(124,92,255,.2), rgba(79,216,245,.2));
+}
+.card h3 { font-size: 20px; letter-spacing: -.3px; margin-bottom: 8px; }
+.card p { color: var(--muted); font-size: 16px; }
+.tag {
+  display: inline-block; margin-top: 18px; padding: 4px 12px;
+  border-radius: 999px; background: var(--tag-bg); color: var(--accent-text);
+  font-size: 13px; font-weight: 600;
+}
+
+/* Tugmalar */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 15px 28px; border-radius: 12px;
+  font-size: 16px; font-weight: 600; text-decoration: none;
+  transition: transform .15s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn.primary, .btn.phone { background: var(--btn); color: #fff; box-shadow: 0 10px 26px rgba(91,48,240,.35); }
+.btn.tg { background: var(--tg); color: #fff; box-shadow: 0 10px 26px rgba(43,125,224,.3); }
+
+/* Aloqa */
+.contact .box {
+  text-align: center; padding: 64px 24px;
+  border-radius: 28px; border: 1px solid var(--line);
+  background:
+    radial-gradient(500px 260px at 50% 0%, var(--glow), transparent 70%),
+    var(--card);
+  box-shadow: var(--shadow);
+}
+.contact .lead { margin: 0 auto 32px; }
+.contacts { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.contact-note { color: var(--muted); margin-top: 26px; font-size: 17px; }
+
+footer { text-align: center; color: var(--muted); font-size: 14px; padding: 8px 0 44px; }
+
+/* Planshet va telefon */
+@media (max-width: 900px) {
+  .hero-frame { padding: 16px; }
+  .hero-card { padding: 0 24px 48px; border-radius: 24px; }
+  .nav { height: 76px; }
+  .menu-btn { display: grid; }
+  .nav ul {
+    display: none; position: absolute; top: 76px; left: 0; right: 0; z-index: 5;
+    flex-direction: column; gap: 0; padding: 8px 12px 12px; margin: 0;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+  .nav ul.open { display: flex; }
+  .nav ul a { padding: 14px 12px; }
+  .nav-btn { margin-left: auto; }
+  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 16px; }
+  .hero-img { order: -1; }
+  section { padding: 64px 0; }
+  .contact .box { padding: 48px 20px; }
+}
+@media (max-width: 520px) {
+  .nav-btn { display: none; }
+  .nav .icon-btn:first-of-type { margin-left: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
