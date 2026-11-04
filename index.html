@@ -12,6 +12,7 @@
     try { t = localStorage.getItem('theme'); } catch (e) {}
     if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     document.documentElement.dataset.theme = t;
+    document.documentElement.classList.add('js');
   })();
 </script>
 <link rel="stylesheet" href="style.css">
@@ -142,19 +143,19 @@
         <h2>Ko'p so'raladigan savollar</h2>
         <p class="lead">Javob topolmasangiz, to'g'ridan-to'g'ri yozing.</p>
         <div class="faq">
-          <details>
+          <details name="faq">
             <summary>Sayt yaratish qancha vaqt oladi?</summary>
             <p>Muddat loyiha hajmiga bog'liq. Topshiriqni ko'rib chiqqach, aniq muddatni aytaman.</p>
           </details>
-          <details>
+          <details name="faq">
             <summary>Narx qanday belgilanadi?</summary>
             <p>Narx ish hajmi va murakkabligiga qarab belgilanadi. Telegramda vazifani qisqacha yozing, narxni aytaman.</p>
           </details>
-          <details>
+          <details name="faq">
             <summary>Telegram bot nimalarga qodir?</summary>
             <p>Buyurtma qabul qilish, mijozlarga avtomatik javob berish, xabar yuborish va ma'lumotlar bilan ishlash kabi vazifalarni bajaradi.</p>
           </details>
-          <details>
+          <details name="faq">
             <summary>Serverni ham sozlab berasizmi?</summary>
             <p>Ha, serverlarni sozlash xizmatlarimdan biri: o'rnatish, xavfsizlik va barqaror ishlashini ta'minlash.</p>
           </details>

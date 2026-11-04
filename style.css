@@ -125,9 +125,11 @@ h2 { font-size: clamp(30px, 4.5vw, 42px); line-height: 1.15; letter-spacing: -1p
   background: var(--card); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 30px;
   box-shadow: var(--shadow);
-  transition: transform .25s, border-color .25s;
+  transition: transform .2s, border-color .2s;
 }
-.card:hover { transform: translateY(-5px); border-color: var(--accent); }
+@media (hover: hover) {
+  .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+}
 .card .ico {
   display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 20px;
   border-radius: 14px; font-size: 24px;
@@ -232,6 +234,23 @@ footer { text-align: center; color: var(--muted); font-size: 14px; padding: 8px 
   .nav .icon-btn:first-of-type { margin-left: auto; }
 }
 
+/* Animatsiyalar (yengil va tez) */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.hero > div:first-child { animation: rise .5s ease-out both; }
+.hero-img { animation: rise .6s .1s ease-out both; }
+
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .4s ease-out, transform .4s ease-out; }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* Savol-javob: yumshoq ochilish (qo'llab-quvvatlamaydigan brauzerda darrov ochiladi) */
+@supports selector(::details-content) {
+  .faq details { interpolate-size: allow-keywords; }
+  .faq details::details-content { block-size: 0; overflow: clip; transition: block-size .25s ease, content-visibility .25s allow-discrete; }
+  .faq details[open]::details-content { block-size: auto; }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero > div:first-child, .hero-img { animation: none; }
+  .js .reveal { opacity: 1; transform: none; }
   * { transition: none !important; scroll-behavior: auto !important; }
 }

@@ -18,7 +18,8 @@
 ## Texnik chegaralar
 - Faqat 3 ta fayl: `index.html`, `style.css`, `script.js` (+ `images/`). Yangi fayl faqat kerak bo'lsa.
 - Kutubxona, freymvork, build bosqichi, CDN yo'q. Oddiy HTML/CSS/JS.
-- JS minimal: menyu, rejim almashtirish, yil. Murakkab mantiq qo'shma.
+- JS minimal: menyu, rejim almashtirish, yil, bo'limlarni scroll'da paydo qilish. Murakkab mantiq qo'shma.
+- Animatsiya yengil va tez (<= 0,5 s), `prefers-reduced-motion` hurmat qilinadi.
 - Aloqa: telefon `979 123 45 67`, Telegram `@sardor0418` (ommaviy ma'lumot).
 - Parol, kalit, token yozilmaydi.
 - "Ishlarim" kartochkalari va "Mijozlar fikri" sharhlari hozircha namuna ("Namuna" belgisi bilan); haqiqiylari bilan almashtiriladi.
