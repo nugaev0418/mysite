@@ -4,7 +4,8 @@
 - Bir sahifali shaxsiy sayt. Egasi: Sardor No'g'ayev, 10 yillik tajribali PHP backend dasturchi va o'qituvchi.
 - Kim uchun: potensial mijozlar (sayt, Telegram bot, server sozlash buyurtmachilari).
 - Maqsad: tez tanishtirish va mijozni aloqaga olib kelish (telefon, Telegram).
-- Bo'limlar: Hero, Xizmatlar, Loyihalar, Aloqa. Til: o'zbek (lotin), `lang="uz"`.
+- Bo'limlar: Hero, Xizmatlar, Ishlarim, Mijozlar fikri, Savol-javob, Aloqa. Til: o'zbek (lotin), `lang="uz"`.
+- Menyu (`.topbar`) sahifa tepasida qotib turadi; bo'limga o'tish silliq (`scroll-behavior: smooth`).
 
 ## Uslub qoidalari
 - Ranglar: binafsha asosiy (`--accent`/`--btn`), oq-oqish fon, yorug' va qorong'i rejim (`data-theme`).
@@ -20,7 +21,8 @@
 - JS minimal: menyu, rejim almashtirish, yil. Murakkab mantiq qo'shma.
 - Aloqa: telefon `979 123 45 67`, Telegram `@sardor0418` (ommaviy ma'lumot).
 - Parol, kalit, token yozilmaydi.
-- "Loyihalar" kartochkalari hozircha namuna; haqiqiy ishlar bilan almashtiriladi.
+- "Ishlarim" kartochkalari va "Mijozlar fikri" sharhlari hozircha namuna ("Namuna" belgisi bilan); haqiqiylari bilan almashtiriladi.
+- Uydirma sharhni haqiqiy mijoz fikri sifatida ko'rsatma.
 
 ## Ish qoidalari
 - Katta o'zgarishdan oldin qisqa reja ko'rsat va tasdiq kut. Kichik tuzatishni darrov qil.
