@@ -21,6 +21,8 @@
 - JS minimal: menyu, rejim almashtirish, yil, bo'limlarni scroll'da paydo qilish. Murakkab mantiq qo'shma.
 - Animatsiya yengil va tez (<= 0,5 s), `prefers-reduced-motion` hurmat qilinadi.
 - Aloqa: telefon `979 123 45 67`, Telegram `@sardor0418` (ommaviy ma'lumot).
+- Havola kartasi (og/twitter teglari) `index.html` `<head>` da; manzillar to'liq: `https://nugaev0418.github.io/mysite/`. Domen o'zgarsa, shularni ham o'zgartir.
+- `images/og-image.png` (1200x630, PNG) ism yoki kasb o'zgarganda qayta yasaladi; belgilar: `favicon.svg/png`, `apple-touch-icon.png`.
 - Parol, kalit, token yozilmaydi.
 - "Ishlarim" kartochkalari va "Mijozlar fikri" sharhlari hozircha namuna ("Namuna" belgisi bilan); haqiqiylari bilan almashtiriladi.
 - Uydirma sharhni haqiqiy mijoz fikri sifatida ko'rsatma.
