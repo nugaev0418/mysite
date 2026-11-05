@@ -21,11 +21,21 @@
 - JS minimal: menyu, rejim almashtirish, yil, bo'limlarni scroll'da paydo qilish. Murakkab mantiq qo'shma.
 - Animatsiya yengil va tez (<= 0,5 s), `prefers-reduced-motion` hurmat qilinadi.
 - Aloqa: telefon `979 123 45 67`, Telegram `@sardor0418` (ommaviy ma'lumot).
-- Havola kartasi (og/twitter teglari) `index.html` `<head>` da; manzillar to'liq: `https://nugaev0418.github.io/mysite/`. Domen o'zgarsa, shularni ham o'zgartir.
+- Havola kartasi (og/twitter teglari) `index.html` `<head>` da; manzillar to'liq: `https://telma.uz/`. Domen o'zgarsa, shularni ham o'zgartir.
 - `images/og-image.png` (1200x630, PNG) ism yoki kasb o'zgarganda qayta yasaladi; belgilar: `favicon.svg/png`, `apple-touch-icon.png`.
 - Parol, kalit, token yozilmaydi.
 - "Ishlarim" kartochkalari va "Mijozlar fikri" sharhlari hozircha namuna ("Namuna" belgisi bilan); haqiqiylari bilan almashtiriladi.
 - Uydirma sharhni haqiqiy mijoz fikri sifatida ko'rsatma.
+
+## Server (Hetzner VPS)
+- Ubuntu, Docker + Compose, ufw (22/80/443), fail2ban (sshd), vaqt: Asia/Tashkent. Kirish: SSH kalit (`~/.ssh/hetzner_ed25519`).
+- Docker `daemon.json` da `"ip": "127.0.0.1"`: konteyner portlari faqat serverning o'zida ochiladi, tashqariga nginx orqali chiqariladi.
+  Tashqariga ochish kerak bo'lsa `-p 0.0.0.0:...` deb ongli yoz (Docker ufw'ni aylanib o'tadi).
+- Sayt: `https://telma.uz` (nginx, Let's Encrypt, Cloudflare DNS only). Fayllar: `/var/www/telma.uz`.
+- Avto-deploy: `main` ga push -> `.github/workflows/deploy.yml` -> rsync `deploy` foydalanuvchisi orqali.
+  Kalit faqat `rrsync` bilan shu papkaga yozishga cheklangan; maxfiy qismi GitHub Secrets'da (`DEPLOY_SSH_KEY`, `DEPLOY_KNOWN_HOSTS`).
+  Yuboriladi: `index.html`, `style.css`, `script.js`, `images/`. Yangi fayl turi qo'shilsa, workflow'dagi ro'yxatni yangila.
+- Serverda o'zgartirishdan oldin reja ko'rsat. Parol, kalit, IP tokenlarini repoga yozma.
 
 ## Ish qoidalari
 - Katta o'zgarishdan oldin qisqa reja ko'rsat va tasdiq kut. Kichik tuzatishni darrov qil.
